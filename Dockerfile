@@ -23,12 +23,14 @@ COPY api/yarn.lock ./
 # Install API dependencies
 RUN apk add --no-cache vips-dev fftw-dev build-base gcc autoconf automake zlib-dev libpng-dev nasm bash 
 RUN yarn add sharp
+
+# Build the API
 RUN yarn install
 COPY ./api .
 RUN yarn build
 
 # Install the sharp package
-RUN apk add --no-cache vips-dev
+# RUN apk add --no-cache vips-dev
 
 # Expose port 1337 and run the API server
 EXPOSE 1337

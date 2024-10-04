@@ -15,5 +15,7 @@
     "@nuxtjs/apollo": "5.0.0-alpha.6",
     "nuxt": "3.5.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
 }
